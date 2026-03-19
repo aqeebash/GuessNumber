@@ -1,18 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-double add(double a, double b){
-    return a + b;
-}
-
 int main(){
 
-    double num1, num2;
-    printf("Enter two numbers: ");
-    scanf("%lf %lf", &num1, &num2);
+    int guess, num=6;
 
-    printf("result= %lf\n", add(num1, num2));
+    do
+    {
+        printf("Enter a digit: ");
+        scanf("%d", guess);
+
+        if (guess>num)
+        {
+            printf("Too high\n");
+        } else if(guess<num){
+            printf("Too low\n");
+        } else{
+            printf(" You guessed correctly\n");
+        }
+        
+    } while (guess!=num);
+    
+
 
     return 0;
 }
